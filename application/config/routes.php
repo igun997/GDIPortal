@@ -53,4 +53,5 @@ $route['default_controller'] = 'init';
 $route['404_override'] = 'error404';
 $route['translate_uri_dashes'] = TRUE;
 $route['public'] = "public/home";
+$route['public/detail/(:any)'] = "public/detail/page/$1";
 $route['gdiadmin'] = "admin/home";
