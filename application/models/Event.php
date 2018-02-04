@@ -19,11 +19,11 @@ class Event extends CI_Model{
       return $this->db->limit($this->limit,0)->order_by("id_event","desc")->get("event");
     }
   }
-  function eventdonasi($value = ""){
+  function eventdonasi($value = "",$status = 1){
     if($value != ""){
-      return $this->db->select("*")->from("event a")->join("event_donasi b","a.id_event = b.id_event")->where($value)->get();
+      return $this->db->select("*")->from("event a")->join("event_donasi b","a.id_event = b.id_event")->where("b.status",$status)->where($value)->get();
     }else{
-      return $this->db->select("*")->from("event a")->join("event_donasi b","a.id_event = b.id_event")->get();
+      return $this->db->select("*")->from("event a")->join("event_donasi b","a.id_event = b.id_event")->where("b.status",$status)->get();
     }
   }
 
