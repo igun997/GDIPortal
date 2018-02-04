@@ -18,7 +18,7 @@
                           <li class="item">
                               <div class="grid-item cause-grid-item small-business format-standard">
                                   <div class="grid-item-inner">
-                                      <a href="<?= base_url("public/detail/".$value->slug) ?>" class="media-box">
+                                      <a href="<?= base_url("public/detail/".$value->slug."#konten") ?>" class="media-box">
                                           <img src="<?= base_url("_upload/".$value->gambar) ?>" alt="<?= base_url("public/detail/".$value->slug) ?>">
                                       </a>
                                       <div class="grid-item-content">
@@ -35,7 +35,7 @@
                                           <h3 class="post-title"><a href="<?= base_url("public/detail/".$value->slug) ?>"><?= $value->judul ?></a></h3>
                                           <div class="meta-data">Terkumpul <?= "Rp. ".number_format($total); ?> / <span class="cause-target">Rp. <?= number_format($value->target_biaya) ?></span></div>
                                       </div>
-                                    <a href="<?= base_url("public/detail/".$value->slug) ?>" class="btn btn-primary"><?= ($diffdays == 0)?"Lihat Acara":"Donasi Sekarang" ?></a>
+                                    <a href="<?= base_url("public/detail/".$value->slug."#konten") ?>" class="btn btn-primary"><?= ($diffdays == 0)?"Lihat Acara":"Donasi Sekarang" ?></a>
                                   </div>
                               </div>
                           </li>
