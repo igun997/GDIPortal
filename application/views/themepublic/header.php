@@ -32,10 +32,10 @@
         <header class="site-header">
             <div class="container">
                 <div class="site-logo">
-                    <a href="index.html" class="default-logo"><img src="<?= $this->config->item("logo") ?>" alt="Logo"></a>
-                    <a href="index.html" class="default-retina-logo"><img src="<?= $this->config->item("logo") ?>" alt="Logo" width="199" height="30"></a>
-                    <a href="index.html" class="sticky-logo"><img src="<?= $this->config->item("logoSticky") ?>" alt="Logo"></a>
-                    <a href="index.html" class="sticky-retina-logo"><img src="<?= $this->config->item("logoSticky") ?>" alt="Logo" width="199" height="30"></a>
+                    <a href="<?= base_url() ?>" class="default-logo"><img src="<?= $this->config->item("logo") ?>" alt="Logo"></a>
+                    <a href="<?= base_url() ?>" class="default-retina-logo"><img src="<?= $this->config->item("logo") ?>" alt="Logo" width="199" height="30"></a>
+                    <a href="<?= base_url() ?>" class="sticky-logo"><img src="<?= $this->config->item("logoSticky") ?>" alt="Logo"></a>
+                    <a href="<?= base_url() ?>" class="sticky-retina-logo"><img src="<?= $this->config->item("logoSticky") ?>" alt="Logo" width="199" height="30"></a>
                 </div>
              	<a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
                 <div class="header-info-col"><i class="fa fa-phone"></i> <?= $this->config->item("telepon") ?></div>
@@ -65,14 +65,14 @@
                     		<li><a href="#">Laporan Acara</a></li>
                       </ul>
                     </li>
-                    <li><a href="#">Galeri Kegiatan</a>
-                    </li>
                     <li><a href="#">Informasi</a>
                         <ul>
                             <li><a href="#">Berita Kegiatan</a></li>
                             <li><a href="#">Formulir Volunteer / Relawan</a></li>
                         </ul>
                     </li>
+                    <li><a href="#sectionBanner">Daftar</a>
+                    <li><a href="#">Login</a>
               	</ul>
             </div>
         </header>
@@ -104,13 +104,13 @@
   </div>
 
 
-    <div class="featured-links row">
+    <div id="sectionBanner" class="featured-links row">
     	<a href="#" class="featured-link col-md-4 col-sm-4">
         	<span>Lihat Acara Kami</span>
         	<strong>Lihat Sekarang</strong>
         </a>
     	<a href="#" class="featured-link col-md-4 col-sm-4">
-        	<span>Ingin Menjadi Relawan ?</span>
+        	<span>Ingin Menjadi Donatur ?</span>
         	<strong>Gabung Sekarang</strong>
         </a>
     	<a href="#" class="featured-link col-md-4 col-sm-4">
