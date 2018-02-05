@@ -31,7 +31,7 @@
                           <ul class="list-group">
                           <li class="list-group-item">Total Donatur<span class="badge">2</span></li>
                           <li class="list-group-item">Tanggal Donasi Dimulai <span class="badge"><?= date("d-m-Y H:i:s",strtotime($data["event"]->mulai_donasi)) ?></span></li>
-                          <li class="list-group-item">Waktu Donasi Berakhir <span class="badge"><?= ($diffdays > 0)?$diffdays." Hari Lagi":"Donasi Ditutup" ?> </span></li>
+                          <li class="list-group-item">Waktu Donasi Berakhir <span class="badge"><?= (strtotime(date("Y-m-d H:i:s")) < strtotime($data["event"]->selesai_donasi))?$diffdays." Hari Lagi":"Donasi Ditutup" ?> </span></li>
                         </ul>
                           <button type="button" class="btn btn-primary btn-block" id="donasi" data-id="<?= $data["event"]->id_event ?>">Saya Akan Bantu</button>
                       </div>
