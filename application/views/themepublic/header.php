@@ -72,7 +72,7 @@
                         </ul>
                     </li>
                     <li><a href="#sectionBanner">Daftar</a>
-                    <li><a href="#">Login</a>
+                    <li><a href="<?= base_url("pengguna/login") ?>">Login</a>
               	</ul>
             </div>
         </header>
