@@ -45,7 +45,7 @@ class Data extends REST_Controller {
     function login_post(){
       $this->load->model("donatur");
       $data = $this->input->post(null,true);
-      $temp = $this->donatur->find(array("username"=>$data["username"],"password"=>md5($data["password"])));
+      $temp = $this->donatur->find(array("username"=>$data["username"],"password"=>md5($data["password"]),"status"=>1));
       if($temp->num_rows() > 0){
         $array = array(
           'penggunaLogin' => true,
@@ -56,7 +56,28 @@ class Data extends REST_Controller {
         $this->session->set_userdata($array);
         $this->response(array("status"=>true,"msg"=>"Login Berhasil"));
       }else{
-        $this->response(array("status"=>false,"msg"=>"User dan Password Salah"));
+        $this->response(array("status"=>false,"msg"=>"User dan Password Salah / Akun Belum Di Aktivasi"));
+      }
+    }
+    function register_post()
+    {
+      $this->load->model("donatur");
+      $data = $this->input->post(null,true);
+      unset($data["tanggal_lhr_submit"]);
+      if($data["password_1"] == $data["password_2"]){
+        $data["nama_donatur"] = $data["nama"];
+        $data["password"] = md5($data["password_1"]);
+        unset($data["password_1"]);
+        unset($data["nama"]);
+        unset($data["password_2"]);
+        $status = $this->donatur->insert($data);
+        if($status){
+          $this->response(array("status"=>true,"msg"=>"Registrasi Berhasil"),200);
+        }else{
+          $this->response(array("status"=>true,"msg"=>"Registrasi Berhasil"),200);
+        }
+      }else{
+        $this->response(array("status"=>false,"msg"=>"Registrasi Gagal"),404);
       }
     }
     function goldrate_get(){
