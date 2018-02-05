@@ -56,3 +56,4 @@ $route['public'] = "public/home";
 $route['public/detail/(:any)'] = "public/detail/page/$1";
 $route['gdiadmin'] = "admin/home";
 $route['pengguna'] = "user/home";
+$route['pengguna/login'] = "user/login";
