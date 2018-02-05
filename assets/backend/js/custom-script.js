@@ -23,23 +23,36 @@ $("#submitLogin").on("click", function() {
   }).then((result) => {
     if (result.dismiss === 'timer') {
       $.ajax({
-          url: base_url+"/data/login",
+          url: base_url + "/data/login",
           type: 'POST',
           dataType: 'json',
           data: dataLogin
         })
         .done(function(a) {
-          if(a.status){
-            swal("Login Berhasil",a.msg,"success").then((result)=>{
-              location.href = base_url+"/pengguna/home";
+          if (a.status) {
+            swal("Login Berhasil", a.msg, "success").then((result) => {
+              location.href = base_url + "/pengguna/home";
             });
-          }else{
-            swal("Login Gagal",a.msg,"error")
+          } else {
+            swal("Login Gagal", a.msg, "error")
           }
         })
         .fail(function() {
-          swal("Login Gagal","Cek Koneksi Jaringan Kamu","error")
+          swal("Login Gagal", "Cek Koneksi Jaringan Kamu", "error")
         })
     }
   })
+});
+//Date Picker
+var $input = $('.datepick').pickadate({
+  format: 'yyyy-mm-dd',
+  formatSubmit: 'yyyy-mm-dd',
+  selectYears: true,
+  selectMonths: true
+});
+//register
+$("#submitRegister").on('click', function(event) {
+  event.preventDefault();
+  var dataForm = $("#formRegister").serializeArray();
+  
 });
