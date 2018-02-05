@@ -16,5 +16,9 @@ class Donatur extends CI_Model{
       return $this->db->get("donatur");
     }
   }
+function insert($value='')
+  {
+ return $this->db->insert("donatur", $value);
 
+  }
 }
