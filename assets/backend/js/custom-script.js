@@ -54,5 +54,26 @@ var $input = $('.datepick').pickadate({
 $("#submitRegister").on('click', function(event) {
   event.preventDefault();
   var dataForm = $("#formRegister").serializeArray();
-  
+  console.log("Register Exc");
+  console.log(dataForm);
+  $.ajax({
+    url: base_url+'/data/register',
+    type: 'POST',
+    dataType: 'json',
+    data: dataForm
+  })
+  .done(function(a) {
+    console.log("success");
+    if (a.status) {
+      swal("Registrasi Berhasil", a.msg, "success");
+      $("#formRegister")[0].reset();
+    } else {
+      swal("Registrasi Gagal", a.msg, "error");
+    }
+  })
+  .fail(function() {
+    console.log("error");
+    swal("Registrasi Gagal", "Cek Koneksi Jaringan Kamu", "error");
+  })
+
 });
