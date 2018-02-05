@@ -32,6 +32,7 @@ $config["js"] = array(
 $config["telepon"] = "081214267695";
 $config["favicon"] = base_url("assets/images/favicon.PNG");
 $config["logo"] = base_url("assets/images/logo.PNG");
+$config["logoGDI"] = base_url("assets/images/logoGDI.png");
 $config["logoSticky"] = base_url("assets/images/sticky-logo.PNG");
 $config["fb"] = "";
 $config["twitter"] = "";
