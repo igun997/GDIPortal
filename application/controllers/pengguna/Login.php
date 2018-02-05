@@ -32,7 +32,7 @@ class Login extends CI_Controller{
     );
 
     //Render Page
-    $this->template->setTemplate("user/login",array("judul"=>"Halaman Masuk"),"","",$css,$js);
+    $this->template->setTemplate("user/login",array("judul"=>"Halaman Masuk Donatur"),"","",$css,$js);
   }
 
 }
