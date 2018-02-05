@@ -75,7 +75,7 @@
         </div>
         <div class="row">
           <div class="input-field col s6 m6 l6">
-            <p class="margin medium-small"><a href="page-register.html">Daftar Menjadi Donatur</a></p>
+            <p class="margin medium-small"><a href="<?= base_url("pengguna/register") ?>">Daftar Menjadi Donatur</a></p>
           </div>
           <div class="input-field col s6 m6 l6">
               <p class="margin right-align medium-small"><a href="page-forgot-password.html">Lupa Password ?</a></p>
