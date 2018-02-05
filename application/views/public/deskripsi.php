@@ -15,7 +15,6 @@
                   }
                   $persentasi = ($total*100)/$data["event"]->target_biaya;
                   $diffdays = $this->template->diffdays(date("Y-m-d H:i:s"),$data["event"]->selesai_donasi);
-                  $diffdaysstart = $this->template->diffdays(date("Y-m-d H:i:s"),$data["event"]->mulai_donasi);
                 ?>
                   <span class="label label-default">Dana Terkumpul</span>
                   <div class="progress">
@@ -31,10 +30,10 @@
                       <div class="col-md-7 col-sm-7">
                           <ul class="list-group">
                           <li class="list-group-item">Total Donatur<span class="badge">2</span></li>
-                          <li class="list-group-item">Waktu Donasi Dimulai <span class="badge"><?= ($diffdaysstart > 0)?$diffdaysstart." Hari Lagi":"Sudah Dimulai" ?></span></li>
+                          <li class="list-group-item">Tanggal Donasi Dimulai <span class="badge"><?= date("d-m-Y H:i:s",strtotime($data["event"]->mulai_donasi)) ?></span></li>
                           <li class="list-group-item">Waktu Donasi Berakhir <span class="badge"><?= ($diffdays > 0)?$diffdays." Hari Lagi":"Donasi Ditutup" ?> </span></li>
                         </ul>
-                          <button type="button" class="btn btn-primary btn-block" id="donasi" data-id="{id}">Saya Akan Bantu</button>
+                          <button type="button" class="btn btn-primary btn-block" id="donasi" data-id="<?= $data["event"]->id_event ?>">Saya Akan Bantu</button>
                       </div>
                   </div>
                   <?= $data["event"]->deskripsi ?>
