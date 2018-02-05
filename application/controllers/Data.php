@@ -28,19 +28,36 @@ class Data extends REST_Controller {
     }
     function index_post()
     {
-      # code...
+      $this->response(array("status"=>false,"msg"=>"No Request Detected"),404);
     }
     function index_get()
     {
-      # code...
+      $this->response(array("status"=>false,"msg"=>"No Request Detected"),404);
     }
     function index_put()
     {
-      # code...
+      $this->response(array("status"=>false,"msg"=>"No Request Detected"),404);
     }
     function index_delete()
     {
-      # code...
+      $this->response(array("status"=>false,"msg"=>"No Request Detected"),404);
+    }
+    function login_post(){
+      $this->load->model("donatur");
+      $data = $this->input->post(null,true);
+      $temp = $this->donatur->find(array("username"=>$data["username"],"password"=>md5($data["password"])));
+      if($temp->num_rows() > 0){
+        $array = array(
+          'penggunaLogin' => true,
+          'username'=>$temp->row()->username,
+          'id_donatur'=>$temp->row()->id_donatur,
+          'nama_donatur'=>$temp->row()->nama_donatur
+        );
+        $this->session->set_userdata($array);
+        $this->response(array("status"=>true,"msg"=>"Login Berhasil"));
+      }else{
+        $this->response(array("status"=>false,"msg"=>"User dan Password Salah"));
+      }
     }
     function goldrate_get(){
 
