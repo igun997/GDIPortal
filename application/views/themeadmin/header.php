@@ -120,9 +120,9 @@
                         <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-payment"></i>Keuangan</a>
                             <div class="collapsible-body">
                               <ul>
-                                  <li><a href="css-typography.html">Laporan Keuangan Ziswaf</a>
+                                  <li><a href="css-typography.html">Laporan Ziswaf</a>
                                   </li>
-                                  <li><a href="css-icons.html">Laporan Keuangan Acara</a>
+                                  <li><a href="css-icons.html">Laporan Acara</a>
                                   </li>
                               </ul>
                             </div>
