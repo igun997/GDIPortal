@@ -62,7 +62,7 @@
               <div class="card">
                 <div class="card-move-up teal waves-effect waves-block waves-light">
                   <div class="move-up">
-                    <p class="margin white-text">Browser Stats</p>
+                    <p class="margin white-text">Grafik Donasi</p>
                     <canvas id="trending-radar-chart" height="114"></canvas>
                   </div>
                 </div>
