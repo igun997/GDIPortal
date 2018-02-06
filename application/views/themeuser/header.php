@@ -93,14 +93,14 @@
                     </div>
                 </div>
             </li>
-                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Home</a>
+                <li class="bold"><a href="<?= base_url("pengguna") ?>" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Home</a>
                 </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i> ZISWAF ONLINE</a>
                             <div class="collapsible-body">
                               <ul>
-                                  <li><a href="css-typography.html">Zakat</a>
+                                  <li><a href="<?= base_url("pengguna/zakat") ?>">Zakat</a>
                                   </li>
                                   <li><a href="css-icons.html">Infaq</a>
                                   </li>
@@ -113,7 +113,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="bold active"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i> Qurban Online</a>
+                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i> Qurban Online</a>
                 </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
