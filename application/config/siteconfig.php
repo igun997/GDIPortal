@@ -52,6 +52,7 @@ $config["css"] = array(
   base_url("assets/vendor/magnific/magnific-popup.css"),
   base_url("assets/vendor/owl-carousel/css/owl.carousel.css"),
   base_url("assets/vendor/owl-carousel/css/owl.theme.css"),
+  base_url("assets/vendor/sweetalert/sweetalert2.css"),
   base_url("assets/css/custom.css"),
   base_url("assets/colors/color1.css")
 );
@@ -63,6 +64,7 @@ $config["js"] = array(
   base_url("assets/js/helper-plugins.js"),
   base_url("assets/vendor/owl-carousel/js/owl.carousel.min.js"),
   base_url("assets/js/bootstrap.js"),
+  base_url("assets/vendor/sweetalert/sweetalert2.js"),
   base_url("assets/vendor/bootbox/bootbox.min.js"),
   base_url("assets/vendor/flexslider/js/jquery.flexslider.js"),
   base_url("assets/js/circle-progress.js"),
@@ -73,6 +75,7 @@ $config["favicon"] = base_url("assets/images/favicon.PNG");
 $config["logo"] = base_url("assets/images/logo.PNG");
 $config["logoGDI"] = base_url("assets/images/logoGDI.png");
 $config["logoSticky"] = base_url("assets/images/sticky-logo.PNG");
+$config["rekening"] = "<b>106666 A/N Indra Gunanda (BRI)</b>";
 $config["fb"] = "";
 $config["twitter"] = "";
 $config["google"] = "";
