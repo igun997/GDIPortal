@@ -1,0 +1,175 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>Materialize - Material Design Admin Template</title>
+
+    <!-- Favicons-->
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <!-- For Windows Phone -->
+
+
+    <!-- CORE CSS-->
+
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+      <!-- Custome CSS-->
+      <link href="css/custom/custom-style.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+      <!-- CSS Bikin Sendiri -->
+      <link href="css/sendiri/sendiri.css" type="text/css" rel="stylesheet">
+
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link href="js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  </head>
+  <body>
+    <h2 style="text-align : center">BIODATA DHUAFA</h2>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col s6">
+          <h4>DATA PRIBADI</h4>
+          <hr size="1" Color="black">
+      <input placeholder="Nama Lengkap..." id="nama" type="text" class="validate">
+      <input placeholder="Tempat Tanggal Lahir..." id="lahir" type="text" class="validate">
+      <input placeholder="No. KTP..." type="number" min="16" max="16" id="ktp" class="validate">
+      <select>
+        <option value="" disabled selected>Agama</option>
+        <option value="1">Islam</option>
+        <option value="2">Kristen</option>
+        <option value="3">Katolik</option>
+        <option value="4">Hindu</option>
+        <option value="5">Budha</option>
+      </select>
+      <input placeholder="Pekerjaan..." id="pekerjaan" type="text" class="validate">
+
+      <label for="penghasilan">PENGHASILAN / BULAN</label>
+      <input value="Rp." id="penghasilan" type="text" class="validate">
+      <input placeholder="Tinggal Dengan Siapa..." id="dengan" type="text" class="validate">
+      <textarea placeholder="Alamat Lengkap..." id="textarea1" class="materialize-textarea"></textarea>
+      <div class="radio">
+        <label for="radio1">Status Kepemilikan Rumah</label>
+        <form action="#" id="radio1">
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="pertama" />
+            <label for="pertama">Milik Sendiri</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="kedua" />
+            <label for="kedua">Kontrak</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="ketiga" />
+            <label for="ketiga">Lain-Lain</label>
+            <input type="text" size="20" target="ketiga">
+          </p>
+        </form>
+      </div>
+
+    </div>
+    <div class="col s6">
+       <h4>DATA KELUARGA</h4>
+       <hr size="1" Color="black">
+       <input placeholder="Jumlah Anak..." id="jmlanak" type="number" size="2" class="validate">
+       <input placeholder="Nama Anak Ke-1..." id="namaanak" type="text" class="validate">
+       <input placeholder="Pekerjaan Anak Ke-1..." id="pekerjaananak" type="text" class="validate">
+       <select>
+         <option value="" disabled selected>Agama</option>
+         <option value="1">Islam</option>
+         <option value="2">Kristen</option>
+         <option value="3">Katolik</option>
+         <option value="4">Hindu</option>
+         <option value="5">Budha</option>
+       </select>
+       <label for="penghasilan1">PENGHASILAN / BULAN</label>
+       <input value="Rp." id="penghasilan1" type="text" class="validate">
+       <textarea placeholder="Alamat Lengkap..." id="textarea1" class="materialize-textarea"></textarea>
+       <div class="radio">
+         <label for="radio2">Status Kepemilikan Rumah</label>
+         <form action="#" id="radio2">
+           <p>
+             <input class="with-gap" name="group1" type="radio" id="pertama1" />
+             <label for="pertama">Milik Sendiri</label>
+           </p>
+           <p>
+             <input class="with-gap" name="group1" type="radio" id="kedua1" />
+             <label for="kedua">Kontrak</label>
+           </p>
+           <p>
+             <input class="with-gap" name="group1" type="radio" id="ketiga1" />
+             <label for="ketiga">Lain-Lain</label>
+             <input type="text" size="20" target="ketiga1">
+             </p>
+         </form>
+         <input placeholder="No Telepon/HP..." id="nohp" type="number" class="validate">
+       </div>
+       <form action="#">
+         <div class="file-field input-field">
+           <div class="btn">
+             <span>File</span>
+             <input type="file">
+           </div>
+           <div class="file-path-wrapper">
+             <input class="file-path validate" type="text" placeholder="Upload Foto Berwarna Ukuran 4x6">
+           </div>
+           <div class="file-field input-field">
+             <div class="btn">
+               <span>File</span>
+               <input type="file">
+             </div>
+             <div class="file-path-wrapper">
+               <input class="file-path validate" type="text" placeholder="Upload Fotocopy KTP">
+             </div>
+             <div class="file-field input-field">
+               <div class="btn">
+                 <span>File</span>
+                 <input type="file">
+               </div>
+               <div class="file-path-wrapper">
+                 <input class="file-path validate" type="text" placeholder="Upload Scan Surat Keterangan Tidak Mampu">
+               </div>
+               <div class="file-field input-field">
+                 <div class="btn">
+                   <span>File</span>
+                   <input type="file">
+                 </div>
+                 <div class="file-path-wrapper">
+                   <input class="file-path validate" type="text" placeholder="Upload Foto Tempat Tinggal">
+                 </div>
+         </div>
+       </form>
+       <hr size="2" Color="black">
+       <br>
+         <button class="btn waves-effect waves-light " type="submit" name="action">Submit</button>
+    </div>
+  </div>
+</div>
+
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
+    <!--materialize js-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--prism-->
+    <script type="text/javascript" src="js/plugins/prism/prism.js"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <!-- chartist -->
+    <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>
+
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="js/plugins.min.js"></script>
+    <!--custom-script.js - Add your own theme custom JS-->
+    <script type="text/javascript" src="js/custom-script.js"></script>
+  </body>
+  </html>
