@@ -11,7 +11,10 @@ class Home extends CI_Controller{
 
   function index()
   {
-    echo "admin";
+    $css = $this->config->item("cssadmin");
+    $js = $this->config->item("jsadmin");
+    //Render Page
+    $this->template->setTemplate("admin/home",array("judul"=>"Halaman Admin"),"themeadmin/header","themeadmin/footer",$css,$js);
   }
 
 }

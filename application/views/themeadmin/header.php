@@ -95,13 +95,13 @@
             </li>
                 <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Home</a>
                 </li>
-                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Artikel</a>
+                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-today"></i> Artikel</a>
                 </li>
-                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Acara</a>
+                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-book"></i> Acara</a>
                 </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i> Data Anak Asuh</a>
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-dns"></i> Data Anak Asuh</a>
                             <div class="collapsible-body">
                               <ul>
                                   <li><a href="css-typography.html">Dhuafa</a>
@@ -113,11 +113,11 @@
                         </li>
                     </ul>
                 </li>
-                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i> Qurban Online</a>
+                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-content-content-cut"></i> Qurban Online</a>
                 </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i>Keuangan</a>
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-payment"></i>Keuangan</a>
                             <div class="collapsible-body">
                               <ul>
                                   <li><a href="css-typography.html">Laporan Keuangan Ziswaf</a>
@@ -131,7 +131,7 @@
                 </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i> Ziswaf Online </a>
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-account-balance-wallet"></i> Ziswaf Online </a>
                             <div class="collapsible-body">
                               <ul>
                                   <li><a href="css-typography.html">Zakat</a>
@@ -140,7 +140,7 @@
                                   </li>
                                   <li><a href="css-typography.html">Shodaqoh</a>
                                   </li>
-                                  <li><a href="css-typography.html">Wakaf</a>
+                                  <li><a href="css-typography.html">Dhuafa</a>
                                   </li>
                               </ul>
                             </div>
