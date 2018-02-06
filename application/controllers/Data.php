@@ -56,6 +56,74 @@ class Data extends REST_Controller {
       $a = $this->sendmail->send_justmail("Test","Lala","indra.gunanda@gmail.com");
       $this->response($a);
     }
+    function berasrate_get()
+    {
+      $url = 'https://ews.kemendag.go.id/harganasional/index.aspx';
+
+    //init curl
+    $ch = curl_init();
+
+    //Set the URL to work with
+    curl_setopt($ch, CURLOPT_URL, $url);
+
+    // ENABLE HTTP POST
+    curl_setopt($ch, CURLOPT_POST, 1);
+
+    //Set the post parameters
+    curl_setopt($ch, CURLOPT_POSTFIELDS, 'v=0');
+
+    //Handle cookies for the login
+    curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
+
+    //Setting CURLOPT_RETURNTRANSFER variable to 1 will force cURL
+    //not to print out the results of its query.
+    //Instead, it will return the results as a string return value
+    //from curl_exec() instead of the usual true/false.
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+    //execute the request (the login)
+    $store = curl_exec($ch);
+    libxml_use_internal_errors(true);
+		if($store != null){
+			$DOM = new DOMDocument();
+			$DOM->loadHTML($store);
+
+			$Header = $DOM->getElementsByTagName('th');
+			$Detail = $DOM->getElementsByTagName('td');
+
+				//#Get header name of the table
+			foreach($Header as $NodeHeader)
+			{
+				$aDataTableHeaderHTML[] = trim($NodeHeader->textContent);
+			}
+			//print_r($aDataTableHeaderHTML); die();
+
+			//#Get row data/detail table without header name as key
+			$i = 0;
+			$j = 0;
+			foreach($Detail as $sNodeDetail)
+			{
+				$aDataTableDetailHTML[$j][] = trim($sNodeDetail->textContent);
+				$i = $i + 1;
+				$j = $i % count($aDataTableHeaderHTML) == 0 ? $j + 1 : $j;
+			}
+			//print_r($aDataTableDetailHTML); die();
+
+			//#Get row data/detail table with header name as key and outer array index as row number
+			for($i = 0; $i < count($aDataTableDetailHTML); $i++)
+			{
+        $x = 0;
+				for($j = 0; $j < count($aDataTableHeaderHTML); $j++)
+				{
+					$aTempData[$i][$x++] = $aDataTableDetailHTML[$i][$j];
+				}
+			}
+			$aDataTableDetailHTML = $aTempData; unset($aTempData);
+      $this->response(array("status"=>true,"data"=>$aDataTableDetailHTML));
+    }else{
+      $this->response(array("status"=>false));
+    }
+    }
     function cekevent_post()
     {
       $this->load->model("event");
