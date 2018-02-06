@@ -95,40 +95,59 @@
             </li>
                 <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Home</a>
                 </li>
+                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-today"></i> Artikel</a>
+                </li>
+                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-book"></i> Acara</a>
+                </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i> ZISWAF ONLINE</a>
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-dns"></i> Data Anak Asuh</a>
                             <div class="collapsible-body">
                               <ul>
-                                  <li><a href="css-typography.html">Zakat</a>
+                                  <li><a href="css-typography.html">Dhuafa</a>
                                   </li>
-                                  <li><a href="css-icons.html">Infaq</a>
-                                  </li>
-                                  <li><a href="css-animations.html">Shodaqoh</a>
-                                  </li>
-                                  <li><a href="css-shadow.html">Wakaf</a>
+                                  <li><a href="css-icons.html">Yatim Piatu</a>
                                   </li>
                               </ul>
                             </div>
                         </li>
                     </ul>
                 </li>
-                <li class="bold active"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i> Qurban Online</a>
+                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-content-content-cut"></i> Qurban Online</a>
                 </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-view-carousel"></i>Laporan</a>
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-payment"></i>Keuangan</a>
                             <div class="collapsible-body">
                               <ul>
                                   <li><a href="css-typography.html">Laporan Ziswaf</a>
                                   </li>
-                                  <li><a href="css-icons.html">Laporan Donasi</a>
+                                  <li><a href="css-icons.html">Laporan Acara</a>
                                   </li>
                               </ul>
                             </div>
                         </li>
                     </ul>
-                </li>            </ul>
+                </li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-account-balance-wallet"></i> Ziswaf Online </a>
+                            <div class="collapsible-body">
+                              <ul>
+                                  <li><a href="css-typography.html">Zakat</a>
+                                  </li>
+                                  <li><a href="css-icons.html">Infaq </a>
+                                  </li>
+                                  <li><a href="css-typography.html">Shodaqoh</a>
+                                  </li>
+                                  <li><a href="css-typography.html">Dhuafa</a>
+                                  </li>
+                              </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+              </ul>
                 <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
             </aside>
             <!-- END LEFT SIDEBAR NAV-->

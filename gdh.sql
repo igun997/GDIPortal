@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 05, 2018 at 08:53 AM
+-- Generation Time: Feb 06, 2018 at 06:15 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.0.26
 
@@ -69,10 +69,13 @@ CREATE TABLE `donatur` (
   `id_donatur` int(11) NOT NULL,
   `nama_donatur` varchar(50) NOT NULL,
   `alamat` varchar(100) NOT NULL,
-  `provinsi` varchar(50) NOT NULL,
   `kota` varchar(50) NOT NULL,
   `tanggal_lhr` date NOT NULL,
   `nomor_tlp` varchar(13) NOT NULL,
+  `facebook_ig` varchar(50) NOT NULL,
+  `pendidikan_terakhir` varchar(50) NOT NULL,
+  `tempat_bekerja` varchar(30) NOT NULL,
+  `pekerjaan` varchar(40) NOT NULL,
   `username` varchar(25) NOT NULL,
   `password` varchar(100) NOT NULL,
   `status` int(11) NOT NULL DEFAULT '0'
@@ -82,8 +85,8 @@ CREATE TABLE `donatur` (
 -- Dumping data for table `donatur`
 --
 
-INSERT INTO `donatur` (`id_donatur`, `nama_donatur`, `alamat`, `provinsi`, `kota`, `tanggal_lhr`, `nomor_tlp`, `username`, `password`, `status`) VALUES
-(1, 'Fake Donatur', 'AAa', 'Jawa Barat', 'Banjar', '2018-02-04', '088080', 'igun', '4ea35d7cf096fae4baf7c47d3e00aab2', 1);
+INSERT INTO `donatur` (`id_donatur`, `nama_donatur`, `alamat`, `kota`, `tanggal_lhr`, `nomor_tlp`, `facebook_ig`, `pendidikan_terakhir`, `tempat_bekerja`, `pekerjaan`, `username`, `password`, `status`) VALUES
+(1, 'Fake Donatur', 'AAa', 'Banjar', '2018-02-04', '088080', '', '', '', '', 'igun', '4ea35d7cf096fae4baf7c47d3e00aab2', 1);
 
 -- --------------------------------------------------------
 
@@ -224,7 +227,7 @@ ALTER TABLE `artikel`
 -- AUTO_INCREMENT for table `donatur`
 --
 ALTER TABLE `donatur`
-  MODIFY `id_donatur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_donatur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `event`

@@ -26,6 +26,14 @@ class Data extends REST_Controller {
         // Construct the parent class
         parent::__construct();
     }
+    function _restrictPengguna()
+    {
+      if($this->session->penggunaLogin == null){
+        $this->response(array("status"=>false,"msg"=>"Anda Belum Login"),200);
+        exit();
+      }
+
+    }
     function index_post()
     {
       $this->response(array("status"=>false,"msg"=>"No Request Detected"),404);
@@ -42,6 +50,52 @@ class Data extends REST_Controller {
     {
       $this->response(array("status"=>false,"msg"=>"No Request Detected"),404);
     }
+    function sendmail_get()
+    {
+      $this->load->model("extender/sendmail");
+      $a = $this->sendmail->send_justmail("Test","Lala","indra.gunanda@gmail.com");
+      $this->response($a);
+    }
+    function cekevent_post()
+    {
+      $this->load->model("event");
+      $data = $this->input->post(null,true);
+      $dataEvent = $this->event->find($data);
+      $datenow = strtotime(date("Y-m-d H:i:s"));
+      $mulai = strtotime($dataEvent->row()->mulai_donasi);
+      $selesai = strtotime($dataEvent->row()->selesai_donasi);
+      if($datenow >= $mulai){
+        if($datenow <= $selesai){
+          $this->response(array("status"=>true,"msg"=>"Masa Donasi Sedang Dimulai"));
+        }else{
+          $this->response(array("status"=>false,"msg"=>"Masa Donasi  Telah Berakhir"));
+        }
+      }else{
+        $this->response(array("status"=>false,"msg"=>"Masa Donasi Belum Di Mulai"));
+      }
+    }
+    public function donasikan_post()
+    {
+      $this->load->model("event");
+      $this->_restrictPengguna();
+      $data = $this->input->post(null,true);
+      $data["id_donatur"] = $this->session->id_donatur;
+      $status = $this->event->donasikan($data);
+      if($status){
+        $this->response(array("status"=>$status,"msg"=>"Donasi anda telah di simpan silahkan transfer nominal yang di donasikan ke nomor rekening ".$this->config->item("rekening")." dan upload bukti donasi di halaman konfirmasi donasi"));
+      }else{
+        $this->response(array("status"=>false,"msg"=>"Sepertinya Ada Kesalahan Di Server Kami"));
+      }
+    }
+    function ceklogin_get()
+    {
+      if($this->session->penggunaLogin != null){
+        $nama = explode(" ",$this->session->nama_donatur);
+        $this->response(array("status"=>true,"msg"=>"Login Detected","username"=>$this->session->username,"nama_depan"=>$nama[0],"nama_belakang"=>(isset($nama[1]))?$nama[1]:"","nomor_tlp"=>$this->session->nomor_tlp),200);
+      }else{
+        $this->response(array("status"=>false,"msg"=>"Login Undetected"),200);
+      }
+    }
     function login_post(){
       $this->load->model("donatur");
       $data = $this->input->post(null,true);
@@ -51,6 +105,7 @@ class Data extends REST_Controller {
           'penggunaLogin' => true,
           'username'=>$temp->row()->username,
           'id_donatur'=>$temp->row()->id_donatur,
+          'nomor_tlp'=>$temp->row()->nomor_tlp,
           'nama_donatur'=>$temp->row()->nama_donatur
         );
         $this->session->set_userdata($array);
