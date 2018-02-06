@@ -93,11 +93,7 @@
                     </div>
                 </div>
             </li>
-<<<<<<< HEAD
-                <li class="bold"><a href="<?= base_url("pengguna") ?>" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Home</a>
-=======
-                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-home"></i> Home</a>
->>>>>>> 4d1da328c1b0e3e44a7cef1ca3400978d15265ae
+                <li class="bold"><a href="<?= base_url("pengguna/home") ?>" class="waves-effect waves-cyan"><i class="mdi-action-home"></i> Home</a>
                 </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
@@ -117,11 +113,7 @@
                         </li>
                     </ul>
                 </li>
-<<<<<<< HEAD
-                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-device-now-widgets"></i> Qurban Online</a>
-=======
                 <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-action-toc"></i> Qurban Online</a>
->>>>>>> 4d1da328c1b0e3e44a7cef1ca3400978d15265ae
                 </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
