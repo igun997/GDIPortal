@@ -20,4 +20,17 @@ class Donatur extends CI_Model{
   {
     return $this->db->insert("donatur", $value);
   }
+  function update($data, $where)
+  {
+          $this->db->update('donatur',$data, $where);
+
+  return  $this->db->affected_rows() > 0;
+
+  }
+  function delete($where)
+  {
+   $this->db->delete("donatur",$where);
+
+   return $this->db->affected_rows() > 0;
+  }
 }
