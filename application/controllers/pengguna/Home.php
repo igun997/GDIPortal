@@ -13,7 +13,10 @@ class Home extends CI_Controller{
 
   function index()
   {
-    echo "AdminPage";
+    $css = $this->config->item("cssuser");
+    $js = $this->config->item("jsuser");
+    //Render Page
+    $this->template->setTemplate("user/home",array("judul"=>"Halaman Pengguna"),"themeuser/header","themeuser/footer",$css,$js);
   }
 
 }
