@@ -13,6 +13,9 @@
 <!-- ================================================
 Scripts
 ================================================ -->
+<script type="text/javascript">
+  var base_url = "<?= base_url() ?>";
+</script>
 <?php
   foreach ($js as $key => $value) {
       printf("<script src='%s'></script>\n",$value);;
