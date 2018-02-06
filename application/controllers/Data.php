@@ -57,6 +57,7 @@ class Data extends REST_Controller {
           'penggunaLogin' => true,
           'username'=>$temp->row()->username,
           'id_donatur'=>$temp->row()->id_donatur,
+          'nomor_tlp'=>$temp->row()->nomor_tlp,
           'nama_donatur'=>$temp->row()->nama_donatur
         );
         $this->session->set_userdata($array);
