@@ -6,6 +6,27 @@ $obj->load->database();
 $obj->load->helper("url");
 $obj->load->model("galeri");
 $galeri = $obj->galeri->find();
+$config["cssuser"] = array(
+  base_url("assets/backend/css/materialize.min.css"),
+  base_url("assets/backend/css/style.min.css"),
+  base_url("assets/backend/css/custom/custom-style.css"),
+  base_url("assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.css"),
+  base_url("assets/backend/js/plugins/jvectormap/jquery-jvectormap.css"),
+  base_url("assets/backend/js/plugins/chartist-js/chartist.min.css")
+);
+$config["jsuser"] = array(
+  base_url("assets/backend/js/plugins/jquery-1.11.2.min.js"),
+  base_url("assets/backend/js/materialize.min.js"),
+  base_url("assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"),
+  base_url("assets/backend/js/plugins/chartist-js/chartist.min.js"),
+  base_url("assets/backend/js/plugins/chartjs/chart.min.js"),
+  base_url("assets/backend/js/plugins/chartjs/chart-script.js"),
+  base_url("assets/backend/js/plugins/sparkline/jquery.sparkline.min.js"),
+  base_url("assets/backend/js/plugins/sparkline/sparkline-script.js"),
+  base_url("assets/backend/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"),
+  base_url("assets/backend/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"),
+  base_url("assets/backend/js/plugins.min.js")
+);
 $config["css"] = array(
   base_url("assets/css/bootstrap.css"),
   base_url("assets/css/bootstrap-theme.css"),
