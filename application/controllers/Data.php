@@ -42,6 +42,12 @@ class Data extends REST_Controller {
     {
       $this->response(array("status"=>false,"msg"=>"No Request Detected"),404);
     }
+    function sendmail_get()
+    {
+      $this->load->model("extender/sendmail");
+      $a = $this->sendmail->send_justmail("Test","Lala","indra.gunanda@gmail.com");
+      $this->response($a);
+    }
     function login_post(){
       $this->load->model("donatur");
       $data = $this->input->post(null,true);
