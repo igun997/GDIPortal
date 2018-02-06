@@ -91,6 +91,34 @@
         </div>
         <div class="row margin">
           <div class="input-field col s12">
+            <i class="mdi-editor-insert-link prefix"></i>
+            <input id="facebook_ig" name="facebook_ig" type="text">
+            <label for="facebook_ig" class="center-align">Link Facebook / IG</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-school prefix"></i>
+            <input id="pendidikan_terakhir" name="pendidikan_terakhir" type="text">
+            <label for="pendidikan_terakhir" class="center-align">Pendidikan Terakhir</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-action-group-work prefix"></i>
+            <input id="tempat_bekerja" name="tempat_bekerja" type="text">
+            <label for="tempat_bekerja" class="center-align">Tempat Bekerja</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-hardware-headset-mic prefix"></i>
+            <input id="pekerjaan" name="pekerjaan" type="text">
+            <label for="pekerjaan" class="center-align">Pekerjaan</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
             <input id="username" name="username" type="email">
             <label for="username" class="center-align">Email</label>
