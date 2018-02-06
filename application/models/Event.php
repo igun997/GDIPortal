@@ -11,6 +11,10 @@ class Event extends CI_Model{
   function setLimit($limit){
     $this->limit = $limit;
   }
+  function donasikan($data)
+  {
+    return $this->db->insert("event_donasi",$data);
+  }
   function find($value='')
   {
     if($value != ""){
