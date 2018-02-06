@@ -1,5 +1,5 @@
 <!-- START FOOTER -->
-<footer class="page-footer" style="position: fixed;bottom: 0;width:100%">
+<footer class="page-footer">
     <div class="footer-copyright">
         <div class="container">
             Copyright © 2018 <a class="grey-text text-lighten-4" href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs" target="_blank">Graha Dhuafa Indonesia</a> All rights reserved.
