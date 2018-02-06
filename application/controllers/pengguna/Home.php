@@ -15,6 +15,7 @@ class Home extends CI_Controller{
   {
     $css = $this->config->item("cssuser");
     $js = $this->config->item("jsuser");
+    array_push($js,base_url("assets/backend/js/dashboard.js"));
     //Render Page
     $this->template->setTemplate("user/home",array("judul"=>"Halaman Pengguna"),"themeuser/header","themeuser/footer",$css,$js);
   }
