@@ -136,7 +136,7 @@
                               <ul>
                                   <li><a href="css-typography.html">Zakat</a>
                                   </li>
-                                  <li><a href="css-icons.html">Infaq Piatu</a>
+                                  <li><a href="css-icons.html">Infaq </a>
                                   </li>
                                   <li><a href="css-typography.html">Shodaqoh</a>
                                   </li>
