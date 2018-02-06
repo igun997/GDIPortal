@@ -20,11 +20,9 @@ $config["jsuser"] = array(
   base_url("assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"),
   base_url("assets/backend/js/plugins/chartist-js/chartist.min.js"),
   base_url("assets/backend/js/plugins/chartjs/chart.min.js"),
-  base_url("assets/backend/js/plugins/chartjs/chart-script.js"),
+  base_url("assets/backend/js/dashboard.js"),
   base_url("assets/backend/js/plugins/sparkline/jquery.sparkline.min.js"),
   base_url("assets/backend/js/plugins/sparkline/sparkline-script.js"),
-  base_url("assets/backend/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"),
-  base_url("assets/backend/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"),
   base_url("assets/backend/js/plugins.min.js")
 );
 $config["css"] = array(
