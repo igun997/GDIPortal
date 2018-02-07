@@ -147,6 +147,10 @@
                         </li>
                     </ul>
                 </li>
+                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-image-switch-camera"></i> Slider</a>
+                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-image-photo-library"></i> Gallery</a>
+                </li>
+                </li>
               </ul>
                 <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
             </aside>
