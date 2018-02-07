@@ -48,6 +48,29 @@
                 </div>
                 <div class="card-panel">
                   <p style="font-weight:bold">Jejak Zakat Fitrah</p>
+                  <p>Perihal Ijab Kabul Zakat amil akan menghubungi anda setelah verifikasi pembayaran selesai</p>
+                  <table id="zafit" class="responsive-table display dataTable">
+                    <thead>
+                      <th>No</th>
+                      <th>Total Zakat</th>
+                      <th>Bukti Pembayaran</th>
+                      <th>Tanggal Zakat</th>
+                      <th>Status Bayar</th>
+                      <th>Status Ijab Kabul</th>
+                      <th>Nama Amil</th>
+                    </thead>
+                    <tbody>
+                      <?php $i = 1; foreach ($data["zafit"]->result() as $key => $value): ?>
+                        <td><?= $i++ ?></td>
+                        <td>Rp. <?= number_format($value->total_zakat) ?></td>
+                        <td><?= ($value->bukti == 0)?"<a href='".base_url("pengguna/zakat/uploadbukti/".$value->id_zakat)."' class='waves-effect waves-light  btn'>Upload Bukti</a>":"Sudah Upload " ?></td>
+                        <td><?= date("d-m-Y H:i:s",strtotime($value->tanggal_zakat)) ?></td>
+                        <td><?= ($value->status_bayar == 0)?"Belum Sah":"Sah" ?></td>
+                        <td><?= ($value->status_ijab == 0)?"Belum Sah":"Sah" ?></td>
+                        <td><?= ($value->id_admin == 0)?"Tidak Ada":"Ada" ?></td>
+                      <?php endforeach; ?>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </li>
