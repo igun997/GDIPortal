@@ -11,6 +11,7 @@ $config["cssuser"] = array(
   base_url("assets/backend/css/style.min.css"),
   base_url("assets/backend/css/custom/custom-style.css"),
   base_url("assets/vendor/sweetalert/sweetalert2.css"),
+  base_url("assets/backend/js/plugins/data-tables/css/jquery.dataTables.min.css"),
   base_url("assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.css"),
   base_url("assets/backend/js/plugins/jvectormap/jquery-jvectormap.css"),
   base_url("assets/backend/js/plugins/chartist-js/chartist.min.css")
@@ -18,6 +19,7 @@ $config["cssuser"] = array(
 $config["jsuser"] = array(
   base_url("assets/backend/js/plugins/jquery-1.11.2.min.js"),
   base_url("assets/backend/js/materialize.min.js"),
+  base_url("assets/backend/js/plugins/data-tables/js/jquery.dataTables.min.js"),
   base_url("assets/backend/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"),
   base_url("assets/backend/js/plugins/chartist-js/chartist.min.js"),
   base_url("assets/backend/js/plugins/chartjs/chart.min.js"),
