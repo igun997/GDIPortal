@@ -33,9 +33,9 @@ $(document).ready(function() {
     })
     .done(function(a) {
       if(a.status){
-
+        swal("Sukses",a.msg,"success");
       }else{
-        swal("Error Terjadi","Terjadi Kesalah di Server Kami","error");
+        swal("Error Terjadi",a.msg,"error");
       }
     })
     .fail(function() {

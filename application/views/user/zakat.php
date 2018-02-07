@@ -27,6 +27,7 @@
               <div class="collapsible-body">
                 <p>Zakat Fitrah ialah zakat diri yang diwajibkan atas diri setiap individu lelaki dan perempuan muslim yang berkemampuan dengan syarat-syarat yang ditetapkan. Kata Fitrah yang ada merujuk pada keadaan manusia saat baru diciptakan sehingga dengan mengeluarkan zakat ini manusia dengan izin Allah akan kembali fitrah.</p>
                 <p>Zakat Fitrah per orang = 3,5 liter x harga beras di pasaran per liter. <b>Contoh:</b> Harga beras di pasar rata-rata Rp10.000,- per liter, maka zakat fitrah yang harus dibayar per orang sebesar Rp35.000,-. Kalau menghitung dari segi berat, maka Zakat Fitrah per orang = 2,7 kg x harga beras di pasaran per kilogram.</p>
+
                 <div class="card-panel">
                   <p style="font-weight:bold">Zakat Fitrah Online</p>
                   <form action="" method="post" id="formZafit">
@@ -44,6 +45,9 @@
                     <p style="text-align:center"><button id="submitZafit" type="button" class="waves-effect waves-light  btn">Bayarkan Zakat</button></p>
                   </div>
                 </form>
+                </div>
+                <div class="card-panel">
+                  <p style="font-weight:bold">Jejak Zakat Fitrah</p>
                 </div>
               </div>
             </li>

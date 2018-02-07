@@ -58,10 +58,11 @@ class Data extends REST_Controller {
       $data["id_donatur"] = $this->session->id_donatur;
       $ui = $this->zakat->insert($data);
       if($ui){
-        $data = array("status"=>true,"msg"=>"Zakat Anda Sudah Di Inputkan Silahkan Melakukan Pembayaraan ke Rekening ".$this->config->item("rekening")." dan lakukan Konfirmasi Pembayaraan Zakat di atas formulir ini");
+        $data = array("status"=>true,"msg"=>"Zakat Anda Sudah Di Inputkan Silahkan Melakukan Pembayaraan ke Rekening ".$this->config->item("rekening")." dan lakukan Konfirmasi Pembayaraan Zakat di bawah formulir ini");
       }else{
         $data = array("status"=>false,"msg"=>"Maaf ada Kesalah di Sisi Server Kami");
       }
+      $this->response($data,200);
     }
     function sendmail_get()
     {
