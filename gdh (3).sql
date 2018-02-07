@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 07 Feb 2018 pada 07.02
+-- Generation Time: 07 Feb 2018 pada 09.56
 -- Versi Server: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -88,6 +88,37 @@ CREATE TABLE IF NOT EXISTS `artikel` (
   `gambar` varchar(40) NOT NULL,
   `tanggal_buat` date NOT NULL,
   `id_admin` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `dhuafa`
+--
+
+CREATE TABLE IF NOT EXISTS `dhuafa` (
+`id_dhuafa` int(10) NOT NULL,
+  `nama1` varchar(30) NOT NULL,
+  `ttl1` varchar(30) NOT NULL,
+  `ktp1` int(20) NOT NULL,
+  `agama1` varchar(20) NOT NULL,
+  `pekerjaan1` varchar(30) NOT NULL,
+  `penghasilan1` varchar(20) NOT NULL,
+  `status_tinggal` varchar(30) NOT NULL,
+  `alamat1` varchar(50) NOT NULL,
+  `status_rumah1` varchar(30) NOT NULL,
+  `jumlah_anak` int(5) NOT NULL,
+  `nama_anak1` varchar(30) NOT NULL,
+  `pekerjaan_anak1` varchar(30) NOT NULL,
+  `agama_anak1` varchar(30) NOT NULL,
+  `penghasilan_anak1` int(10) NOT NULL,
+  `alamat_anak1` varchar(50) NOT NULL,
+  `status_rumah2` varchar(30) NOT NULL,
+  `nohp1` int(20) NOT NULL,
+  `foto` varchar(30) NOT NULL,
+  `ktp` varchar(30) NOT NULL,
+  `sktm` varchar(30) NOT NULL,
+  `tt` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -216,6 +247,12 @@ ALTER TABLE `artikel`
  ADD PRIMARY KEY (`id_artikel`), ADD KEY `id_admin_fk_artikel` (`id_admin`);
 
 --
+-- Indexes for table `dhuafa`
+--
+ALTER TABLE `dhuafa`
+ ADD PRIMARY KEY (`id_dhuafa`);
+
+--
 -- Indexes for table `donatur`
 --
 ALTER TABLE `donatur`
@@ -258,6 +295,11 @@ MODIFY `id_anak` int(30) NOT NULL AUTO_INCREMENT;
 --
 ALTER TABLE `artikel`
 MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `dhuafa`
+--
+ALTER TABLE `dhuafa`
+MODIFY `id_dhuafa` int(10) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `donatur`
 --
