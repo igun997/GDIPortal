@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2018 at 06:15 AM
+-- Generation Time: Feb 07, 2018 at 05:46 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.0.26
 
@@ -115,7 +115,7 @@ CREATE TABLE `event` (
 --
 
 INSERT INTO `event` (`id_event`, `slug`, `judul`, `deskripsi`, `rangkuman`, `gambar`, `target_biaya`, `mulai_acara`, `selesai_acara`, `mulai_donasi`, `selesai_donasi`, `dibuat`, `id_admin`) VALUES
-(1, 'contoh-event', 'Test', 'Contoh', 'Contoh', 'fceeb9b9d469401fe558062c4bd25954.jpg', 1000000, '2018-02-08 00:00:00', '2018-02-10 00:00:00', '2018-02-04 00:00:00', '2018-02-08 00:00:00', '2018-02-01 00:00:00', 1);
+(1, 'contoh-event', 'Test', 'Contoh', 'Contoh', 'fceeb9b9d469401fe558062c4bd25954.jpg', 1000000, '2018-02-08 00:00:00', '2018-02-10 00:00:00', '2018-02-04 00:00:00', '2018-02-07 00:00:00', '2018-02-01 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -126,7 +126,7 @@ INSERT INTO `event` (`id_event`, `slug`, `judul`, `deskripsi`, `rangkuman`, `gam
 CREATE TABLE `event_donasi` (
   `id_event` int(11) NOT NULL,
   `total_donasi` double NOT NULL,
-  `bukti` varchar(100) NOT NULL,
+  `bukti` varchar(100) DEFAULT '0',
   `status` int(11) DEFAULT '0',
   `tgl_donasi` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id_donatur` int(11) NOT NULL
@@ -139,7 +139,8 @@ CREATE TABLE `event_donasi` (
 INSERT INTO `event_donasi` (`id_event`, `total_donasi`, `bukti`, `status`, `tgl_donasi`, `id_donatur`) VALUES
 (1, 100000, 'fceeb9b9d469401fe558062c4bd25954.jpg', 1, '2018-02-02 00:00:00', 1),
 (1, 200000, 'as', 1, '2018-02-07 00:00:00', 1),
-(1, 100000, 'fceeb9b9d469401fe558062c4bd25954.jpg', 0, '2018-02-04 00:00:00', 1);
+(1, 100000, 'fceeb9b9d469401fe558062c4bd25954.jpg', 0, '2018-02-04 00:00:00', 1),
+(1, 10000, '0', 0, '2018-02-06 19:05:21', 1);
 
 -- --------------------------------------------------------
 
@@ -161,6 +162,24 @@ CREATE TABLE `galeri` (
 
 INSERT INTO `galeri` (`id_galeri`, `judul`, `deskripsi`, `img`, `id_admin`) VALUES
 (1, 'Contoh Slider', 'Slider Lala', 'fceeb9b9d469401fe558062c4bd25954.jpg', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zakat`
+--
+
+CREATE TABLE `zakat` (
+  `id_zakat` int(11) NOT NULL,
+  `jenis_zakat` varchar(40) NOT NULL,
+  `total_zakat` double NOT NULL,
+  `bukti` varchar(50) NOT NULL DEFAULT '0',
+  `tanggal_zakat` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status_bayar` int(11) NOT NULL DEFAULT '0',
+  `id_donatur` int(11) NOT NULL,
+  `status_ijab` int(11) DEFAULT '0',
+  `id_admin` int(11) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -208,6 +227,13 @@ ALTER TABLE `galeri`
   ADD KEY `id_admin` (`id_admin`);
 
 --
+-- Indexes for table `zakat`
+--
+ALTER TABLE `zakat`
+  ADD PRIMARY KEY (`id_zakat`),
+  ADD KEY `fk_id_donatur_zakat` (`id_donatur`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -242,6 +268,12 @@ ALTER TABLE `galeri`
   MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `zakat`
+--
+ALTER TABLE `zakat`
+  MODIFY `id_zakat` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -269,6 +301,12 @@ ALTER TABLE `event_donasi`
 --
 ALTER TABLE `galeri`
   ADD CONSTRAINT `galeri_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `zakat`
+--
+ALTER TABLE `zakat`
+  ADD CONSTRAINT `zakat_ibfk_1` FOREIGN KEY (`id_donatur`) REFERENCES `donatur` (`id_donatur`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
