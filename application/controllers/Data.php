@@ -50,6 +50,19 @@ class Data extends REST_Controller {
     {
       $this->response(array("status"=>false,"msg"=>"No Request Detected"),404);
     }
+    function zakatkan_post()
+    {
+      $this->_restrictPengguna();
+      $this->load->model("zakat");
+      $data = $this->input->post(null,true);
+      $data["id_donatur"] = $this->session->id_donatur;
+      $ui = $this->zakat->insert($data);
+      if($ui){
+        $data = array("status"=>true,"msg"=>"Zakat Anda Sudah Di Inputkan Silahkan Melakukan Pembayaraan ke Rekening ".$this->config->item("rekening")." dan lakukan Konfirmasi Pembayaraan Zakat di atas formulir ini");
+      }else{
+        $data = array("status"=>false,"msg"=>"Maaf ada Kesalah di Sisi Server Kami");
+      }
+    }
     function sendmail_get()
     {
       $this->load->model("extender/sendmail");

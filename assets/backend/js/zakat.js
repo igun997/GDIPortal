@@ -21,5 +21,26 @@ $(document).ready(function() {
   .fail(function() {
     swal("Error Terjadi","Periksa Koneksi Jaringan Anda","error");
   });
+  $("#submitZafit").on('click', function(event) {
+    event.preventDefault();
+    var total_zakat = $("#total_zakat").val();
+    console.log("Total Zakat = "+total_zakat);
+    $.ajax({
+      url: base_url+'/data/zakatkan',
+      type: 'POST',
+      dataType: 'json',
+      data: {total_zakat: total_zakat,jenis_zakat:"zakat_fitri"}
+    })
+    .done(function(a) {
+      if(a.status){
 
+      }else{
+        swal("Error Terjadi","Terjadi Kesalah di Server Kami","error");
+      }
+    })
+    .fail(function() {
+      swal("Error Terjadi","Periksa Koneksi Internet Anda","error");
+    });
+
+  });
 });
