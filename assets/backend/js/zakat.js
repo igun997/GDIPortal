@@ -21,6 +21,7 @@ $(document).ready(function() {
   .fail(function() {
     swal("Error Terjadi","Periksa Koneksi Jaringan Anda","error");
   });
+  $("#zafit").DataTable();
   $("#submitZafit").on('click', function(event) {
     event.preventDefault();
     var total_zakat = $("#total_zakat").val();

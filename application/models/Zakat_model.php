@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Zakat extends CI_Model{
+class Zakat_model extends CI_Model{
 
   public function __construct()
   {
@@ -11,7 +11,7 @@ class Zakat extends CI_Model{
   function find($value='')
   {
     if($value != ""){
-      return $this->db->get_where("zakat",$value);
+      return $this->db->order_by("id_zakat","desc")->get_where("zakat",$value);
     }else{
       return $this->db->get("zakat");
     }
@@ -19,6 +19,11 @@ class Zakat extends CI_Model{
   function insert($value='')
   {
     return $this->db->insert("zakat",$value);
+  }
+  function update($data,$where)
+  {
+    $this->db->update('zakat', $data,$where);
+    return $this->db->affected_rows() > 0;
   }
 
 }
