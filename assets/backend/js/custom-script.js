@@ -43,6 +43,41 @@ $("#submitLogin").on("click", function() {
     }
   })
 });
+//Login admin
+$("#submitLoginAdmin").on("click", function() {
+  var dataLogin = $("#formLogin").serializeArray();
+  console.log("Login Admin Exc");
+  console.log(dataLogin);
+  swal({
+    title: 'Sedang Di Proses',
+    text: 'Harap Tunggu',
+    timer: 2000,
+    onOpen: () => {
+      swal.showLoading()
+    }
+  }).then((result) => {
+    if (result.dismiss === 'timer') {
+      $.ajax({
+          url: base_url + "/data/loginadmin",
+          type: 'POST',
+          dataType: 'json',
+          data: dataLogin
+        })
+        .done(function(a) {
+          if (a.status) {
+            swal("Login Berhasil", a.msg, "success").then((result) => {
+              location.href = base_url + "/gdiadmin/home";
+            });
+          } else {
+            swal("Login Gagal", a.msg, "error")
+          }
+        })
+        .fail(function() {
+          swal("Login Gagal", "Cek Koneksi Jaringan Kamu", "error")
+        })
+    }
+  })
+});
 //Date Picker
 var $input = $('.datepick').pickadate({
   format: 'yyyy-mm-dd',
