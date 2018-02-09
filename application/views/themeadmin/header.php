@@ -88,25 +88,25 @@
                             <li><a href="<?= base_url("pengguna/logout") ?>"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
                             </li>
                         </ul>
-                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><?= $this->session->nama_donatur ?> <i class="mdi-navigation-arrow-drop-down right"></i></a>
-                        <p class="user-roal">Donatur</p>
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><?= $this->session->nama ?> <i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <p class="user-roal">Administrator</p>
                     </div>
                 </div>
             </li>
-                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Home</a>
+                <li class="bold"><a href="<?= base_url("gdiadmin/home") ?>" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Home</a>
                 </li>
-                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-today"></i> Artikel</a>
+                <li class="bold"><a href="<?= base_url("gdiadmin/posting") ?>" class="waves-effect waves-cyan"><i class="mdi-action-today"></i> Posting</a>
                 </li>
-                <li class="bold"><a href="index.html" class="waves-effect waves-cyan"><i class="mdi-action-book"></i> Acara</a>
+                <li class="bold"><a href="<?= base_url("gdiadmin/acara") ?>" class="waves-effect waves-cyan"><i class="mdi-action-book"></i> Acara</a>
                 </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
                         <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-dns"></i> Data Anak Asuh</a>
                             <div class="collapsible-body">
                               <ul>
-                                  <li><a href="css-typography.html">Dhuafa</a>
+                                  <li><a href="<?= base_url("gdiadmin/data/dhuafa") ?>">Dhuafa</a>
                                   </li>
-                                  <li><a href="css-icons.html">Yatim Piatu</a>
+                                  <li><a href="<?= base_url("gdiadmin/data/yatimpiatu") ?>">Yatim Piatu</a>
                                   </li>
                               </ul>
                             </div>
@@ -120,9 +120,9 @@
                         <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-payment"></i>Keuangan</a>
                             <div class="collapsible-body">
                               <ul>
-                                  <li><a href="css-typography.html">Laporan Ziswaf</a>
+                                  <li><a href="<?= base_url("gdiadmin/data/laporanziswaf") ?>">Laporan ZISWAF</a>
                                   </li>
-                                  <li><a href="css-icons.html">Laporan Acara</a>
+                                  <li><a href="<?= base_url("gdiadmin/data/laporanacara") ?>">Laporan Acara</a>
                                   </li>
                               </ul>
                             </div>
@@ -134,21 +134,21 @@
                         <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-account-balance-wallet"></i> Ziswaf Online </a>
                             <div class="collapsible-body">
                               <ul>
-                                  <li><a href="css-typography.html">Zakat</a>
+                                  <li><a href="<?= base_url("gdiadmin/data/zakat") ?>">Zakat</a>
                                   </li>
-                                  <li><a href="css-icons.html">Infaq </a>
+                                  <li><a href="<?= base_url("gdiadmin/data/infaq") ?>">Infaq </a>
                                   </li>
-                                  <li><a href="css-typography.html">Shodaqoh</a>
+                                  <li><a href="<?= base_url("gdiadmin/data/shodaqoh") ?>">Shodaqoh</a>
                                   </li>
-                                  <li><a href="css-typography.html">Dhuafa</a>
+                                  <li><a href="<?= base_url("gdiadmin/data/dhuafa") ?>">Dhuafa</a>
                                   </li>
                               </ul>
                             </div>
                         </li>
                     </ul>
                 </li>
-                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-image-switch-camera"></i> Slider</a>
-                <li class="bold"><a href="app-widget.html" class="waves-effect waves-cyan"><i class="mdi-image-photo-library"></i> Gallery</a>
+                <li class="bold"><a href="<?= base_url("gdiadmin/data/slider") ?>" class="waves-effect waves-cyan"><i class="mdi-image-switch-camera"></i> Slider</a>
+                <li class="bold"><a href="<?= base_url("gdiadmin/data/galeri") ?>" class="waves-effect waves-cyan"><i class="mdi-image-photo-library"></i> Gallery</a>
                 </li>
                 </li>
               </ul>
