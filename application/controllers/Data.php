@@ -178,6 +178,23 @@ class Data extends REST_Controller {
         $this->response(array("status"=>false,"msg"=>"Login Undetected"),200);
       }
     }
+    function loginadmin_post(){
+      $this->load->model("admin");
+      $data = $this->input->post(null,true);
+      $temp = $this->admin->find(array("username"=>$data["username"],"password"=>md5($data["password"])));
+      if($temp->num_rows() > 0){
+        $array = array(
+          'adminLogin' => true,
+          'username'=>$temp->row()->username,
+          'id_admin'=>$temp->row()->id_admin,
+          'nama'=>$temp->row()->nama
+        );
+        $this->session->set_userdata($array);
+        $this->response(array("status"=>true,"msg"=>"Login Berhasil"));
+      }else{
+        $this->response(array("status"=>false,"msg"=>"User dan Password Salah / Akun Belum Di Aktivasi"));
+      }
+    }
     function login_post(){
       $this->load->model("donatur");
       $data = $this->input->post(null,true);
