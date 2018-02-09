@@ -70,14 +70,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <button type="button"  id="submitLogin" class="btn waves-effect waves-light col s12">Login</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s6 m6 l6">
-                      </div>
-          <div class="input-field col s6 m6 l6">
-              <p class="margin right-align medium-small"><a href="page-forgot-password.html">Lupa Password ?</a></p>
+            <button type="button"  id="submitLoginAdmin" class="btn waves-effect waves-light col s12">Login</button>
           </div>
         </div>
 
