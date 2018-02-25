@@ -10,9 +10,9 @@ class Post extends CI_Model{
   function find($value='')
   {
     if($value != ""){
-      return $this->db->get_where("post",$value);
+      return $this->db->order_by("id_post","desc")->get_where("post",$value);
     }else{
-      return $this->db->get("post");
+      return $this->db->order_by("id_post","desc")->get("post");
     }
   }
   function insert($value='')
