@@ -10,9 +10,9 @@
               <ul>
                 <li><a class="btn-floating red" href="<?= base_url("gdiadmin/posting/tambah/artikel") ?>" data-toggle="tooltip" title="Tambah Artikel" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="large mdi-editor-border-color"></i></a>
                 </li>
-                <li><a class="btn-floating yellow darken-1" data-toggle="tooltip" title="Tambah Halaman" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="large mdi-editor-border-color"></i></a>
+                <li><a class="btn-floating yellow darken-1" href="<?= base_url("gdiadmin/posting/tambah/halaman") ?>" data-toggle="tooltip" title="Tambah Halaman" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="large mdi-editor-border-color"></i></a>
                 </li>
-                <li><a class="btn-floating green" data-toggle="tooltip" title="Tambah Berita" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="large mdi-editor-border-color"></i></a>
+                <li><a class="btn-floating green" href="<?= base_url("gdiadmin/posting/tambah/berita") ?>" data-toggle="tooltip" title="Tambah Berita" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px) translateX(0px); opacity: 0;"><i class="large mdi-editor-border-color"></i></a>
                 </li>
               </ul>
             </div>
@@ -28,11 +28,13 @@
             </thead>
             <tbody>
               <?php $no = 1;foreach ($data["artikel"]->result() as $key => $value): ?>
+                <tr>
                 <td><?= $no++ ?></td>
                 <td><?= $value->tipe_post ?></td>
                 <td><?= $value->judul ?></td>
                 <td><?= date("Y-m-d H:i:s",strtotime($value->tanggal_buat)) ?></td>
-                <td>a</td>
+                <td><button type="button" class="btn waves-effect waves-light red darken-4 hapus" data-id="<?= $value->id_post ?>">Hapus</button> <a href="<?= base_url("gdiadmin/posting/edit/".$value->id_post) ?>" class="btn waves-effect waves-light yellow darken-4">Edit</a> <a href="<?= base_url("gdiadmin/posting/view/".$value->id_post) ?>" class="btn waves-effect waves-light green darken-4">Lihat</a></td>
+              </tr>
               <?php endforeach; ?>
             </tbody>
           </table>
