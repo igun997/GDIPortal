@@ -20,10 +20,9 @@ class Template {
   }
   public function setTemplate($content,$addons="",$header="",$footer="",$js="",$css="")
   {
+    $galeri = $this->ci->config->item("galeri");
     $data = array();
     $data["data"] = $addons;
-    $galeri = $this->ci->config->item("galeri");
-    $data["data"]["galeri"] = $galeri->result();
     $resCSS = $this->ci->config->item("css");
     $resJS = $this->ci->config->item("js");
     if($js == "" && $css == ""){
@@ -36,6 +35,7 @@ class Template {
     if($header == "" && $footer == ""){
       $this->ci->load->view($content,$data);
     }else{
+      $data["data"]["galeri"] = $galeri->result();
       $this->ci->load->view($header,$data);
       $this->ci->load->view($content,$data);
       $this->ci->load->view($footer,$data);
