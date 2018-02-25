@@ -32,7 +32,13 @@ class Data extends REST_Controller {
         $this->response(array("status"=>false,"msg"=>"Anda Belum Login"),200);
         exit();
       }
-
+    }
+    function _restrictAdmin()
+    {
+      if($this->session->adminLogin == null){
+        $this->response(array("status"=>false,"msg"=>"Anda Belum Login"),200);
+        exit();
+      }
     }
     function index_post()
     {
@@ -69,6 +75,24 @@ class Data extends REST_Controller {
       $this->load->model("extender/sendmail");
       $a = $this->sendmail->send_justmail("Test","Lala","indra.gunanda@gmail.com");
       $this->response($a);
+    }
+    function artikelhapus_post()
+    {
+      $this->_restrictAdmin();
+      $this->load->model("post");
+      $id = $this->input->post("id_post",true);
+      $getFile = $this->post->find(array("id_post"=>$id));
+      $statusLink = unlink(realpath("_upload/".$getFile->row()->gambar));
+      if ($statusLink) {
+        $status = $this->post->delete(array("id_post"=>$id));
+        if($status){
+          $this->response(array("status"=>true,"msg"=>"Artikel Berhasil di Hapus"));
+        }else{
+          $this->response(array("status"=>false,"msg"=>"Artikel Gagal di Hapus"));
+        }
+      }else {
+          $this->response(array("status"=>false,"msg"=>"Gambar Gagal di Hapus"));
+      }
     }
     function berasrate_get()
     {
